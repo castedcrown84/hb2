@@ -3,7 +3,7 @@ const {Model, DataTypes} = require('sequelize')
 const bcrypt = require('bcrypt');
 
 
-
+//instances that allows for a password validation
 class User extends Model { checkpassword(userpw){
 
 return bcrypt.compareSync(userpw, this.password)
@@ -66,6 +66,7 @@ len: [6]
 
 {
 
+//hooks for methods that hashes and salts passwords for database
     hooks:{
 
     beforeCreate: async (newUser) => {
