@@ -8,8 +8,7 @@ if(process.env.JAWSDB_URL){
     sequelize = new Sequelize(process.env.JAWSDB_URL)
 
 
-}
-else{
+}else{
 sequelize = new Sequelize(
 
 process.env.DB_Name,
@@ -27,4 +26,5 @@ port: 3030
 
 )
 }
+
 module.exports = sequelize;

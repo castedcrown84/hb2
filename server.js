@@ -1,8 +1,9 @@
 const express = require('express');
 const sequelize = require('./config/connections');
 const path = require('path');
-const exphbs = require('express-handlebars');
 
+//for handlebars
+const exphbs = require('express-handlebars');
 const hbs = exphbs.create({});
 
 
