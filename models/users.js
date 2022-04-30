@@ -114,3 +114,5 @@ timestamps:true
 
 
 )
+
+module.exports = User;
