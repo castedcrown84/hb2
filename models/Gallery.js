@@ -60,12 +60,7 @@ Gallery.init(
 }
 
 
-
-
-
-
-
-
-
-
 )
+
+
+module.exports = Gallery
