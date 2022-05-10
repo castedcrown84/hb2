@@ -115,4 +115,4 @@ timestamps:true
 
 )
 
-module.exports = User;
+module.exports = User
