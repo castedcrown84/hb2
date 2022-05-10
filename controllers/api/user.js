@@ -76,12 +76,30 @@ try{
 }catch(error){
 console.log(error)
 res.status(400).json(error)
-
-
-
 }
 
 
+})
+
+router.post('/logout', (req, res) => {
+
+if(req.session.loggedin){
+
+req.session.destroy(() => {
+
+res.status(204).end();
+
+
+
+})
+
+
+}else{
+
+res.status(404).end()
+
+
+}
 
 
 })
