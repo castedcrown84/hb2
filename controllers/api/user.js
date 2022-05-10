@@ -53,7 +53,7 @@ try{
 
 
     }
-    const validatepw = await checkpassword(req.body.password)
+    const validatepw = await userData.checkpassword(req.body.password)
 
     if(!validatepw){
 
