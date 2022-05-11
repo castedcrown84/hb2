@@ -14,12 +14,13 @@ const hbs = exphbs.create({});
 const Port = process.env.Port || 3001;
 const app = express();
 
-//session setup
+//session and cookies setup
 const sess = {
 
 secret: "Super secret secret",
 cookie: {
 
+    maxAge: 68400
 
 },
 resave: false,
@@ -31,11 +32,6 @@ db: sequelize
 
 
 })
-
-
-
-
-
 
 }
 
