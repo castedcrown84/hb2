@@ -1,7 +1,20 @@
 const user = require('./Gallery')
-const painter = require('./Paintings')
+const paintings = require('./Paintings')
 const gallery = require('./Gallery')
 
+gallery.hasMany(paintings, {
+
+foreignKey: 'gallery_id',
+
+
+})
+
+paintings.belongsTo(gallery, {
+
+foreignKey: 'gallery_id'
+
+})
+ 
 
 
 
@@ -9,7 +22,4 @@ const gallery = require('./Gallery')
 
 
 
-
-
-
-module.exports = {user, painter, gallery}
+module.exports = {user, paintings, gallery}

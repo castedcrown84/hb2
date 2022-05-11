@@ -84,3 +84,5 @@ Paintings.init(
 
 
 )
+
+module.exports = Paintings
