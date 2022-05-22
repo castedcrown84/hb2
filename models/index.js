@@ -24,4 +24,4 @@ foreignKey: 'gallery_id'
 
 
 
-module.exports = {user, paintings, gallery}
+module.exports = {user, gallery, paintings}

@@ -26,7 +26,7 @@ const gallerydata = [
   const seedGallery = () => {
 
 
-    gallery.beforeBulkCreate(gallerydata)
+    gallery.bulkCreate(gallerydata)
 
   }
 

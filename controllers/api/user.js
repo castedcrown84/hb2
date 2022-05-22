@@ -1,14 +1,11 @@
 const router = require('express').Router();
 const User = require('../../models/users');
 
-
-
 // Route for creating a new user
 router.post('/', async (req, res) => {
 
 try{
-const userData = await Dish.create({
-
+const userData = await User.create({
 
 name: req.body.name,
 email: req.body.email,
@@ -26,10 +23,7 @@ res.status(200).json(userData)
 
 res.status(400).json(error)
 
-
-
 }
-
 })
 
 // api route for user loggin
@@ -103,4 +97,6 @@ res.status(404).end()
 
 
 })
+
+module.exports = router
 

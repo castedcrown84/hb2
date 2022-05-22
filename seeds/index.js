@@ -6,16 +6,16 @@ const seedPainting = require('./paintingData');
 
 const seedAll = async () => {
 
+    await sequelize.sync({force: true})
 
-await sequelize.syn({ force:true})
-await seedGallery()
-await seedPainting
+    await seedGallery();
 
+    await seedPainting();
+ 
 
-process.exit(o)
-
-
+    process.exit(0)
 
 }
 
-seedAll();
+
+seedAll()
