@@ -1,5 +1,5 @@
 const {Model, DataTypes} = require('sequelize');
-const { gallery } = require('.');
+
 const sequelize = require('../config/connections')
 
 

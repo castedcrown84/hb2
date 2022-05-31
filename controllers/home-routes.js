@@ -1,7 +1,6 @@
 const router = require('express').Router();
-const Paintings = require('../models/Paintings')
-const Gallery = require('../models/Gallery');
-const { gallery } = require('../models');
+const {Paintings, Gallery} = require('../models');
+
 
 
 
@@ -46,6 +45,31 @@ const { gallery } = require('../models');
 
     })
 
+
+    router.get('/gallery/:id', async(req, res) => {
+        try {
+            const galleryDb = await findByPk(req.params.id, {
+                include: [{
+
+                    model: 'painting',
+                    attributes: ['id',
+                                'filename',
+                                'title',
+                                'author',
+                                'description']   
+
+
+                }]
+
+            })
+            const gallery = galleryDb.get({plain:true})
+            console.log(`success!`)
+            res.status(204).render('homeroutes', {gallery, loggedIn: req.session.loggedIn})
+        } catch (error) {
+            console.log(error)
+            res.status(404).json(error)
+        }
+    })
 
 
  
